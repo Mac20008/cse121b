@@ -5,11 +5,9 @@
 function add (Number1, Number2) {
     return Number1 + Number2;
 }
-
 function addNumbers () {
     let addnumber1 = Number(document.querySelector("#add1").value);
     let addNumber2 = Number(document.querySelector('#add2').value);
-
     document.querySelector('#sum').value = add(addnumber1, addNumber2);
 }
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
@@ -19,7 +17,6 @@ document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 function subtract (number1, number2) {
     return number1 - number2;
 }
-
 function subtractNumbers () {
     let subtractnumber1 = Number (document.querySelector('#subtract1').value);
     let subtractnumber2 = Number (document.querySelector('#subtract2').value);
