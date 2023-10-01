@@ -36,7 +36,18 @@ const multiplyNumbers = () => {
 document .querySelector('#multiplyNumbers') .addEventListener('click', multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
-
+const divide = (dividend, divisor) => dividend / divisor;
+const divideNumbers = () => {
+  let divideNumber1 = Number(document.querySelector("#dividend").value);
+  let divideNumber2 = Number(document.querySelector("#divisor").value);
+    document.querySelector("#quotient").value = divide(
+    divideNumber1,
+    divideNumber2
+  );
+};
+document
+  .querySelector("#divideNumbers")
+  .addEventListener("click", divideNumbers);
 
 /* Decision Structure */
 const currentDate = new Date ();
