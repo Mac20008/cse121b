@@ -3,18 +3,27 @@
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
-const fullname = 'Jose Machuca'
-document.querySelector('#name').innerHTML = fullname;
-const year = 2023;
+const fullname = 'Jose Machuca';
+const currentdate = new Date();
+const currentyear = currentdate.getFullYear();
+const profilePicture = 'images/headshot.jpeg';
 /* Step 3 - Element Variables */
-document.querySelector('#year').innerHTML = year;
-const image = 'headshot.jpeg'
-document.querySelector("img").setAttribute('src', 'images/' + image);
+const nameElement = document.getElementById('name');
+const foodElement = document.getElementById('food');
+const yearElement = document.getElementById('#year');
+const imageElement = document.querySelector('image');
 /* Step 4 - Adding Content */
-
+ nameElement.innerHTML = `<stong> ${fullname} </strong>`;
+yearElement.textContent = `${currentyear}`;
+imageElement.setAttribute('src' , profilePicture);
+imageElement.setAttribute('alt', `profile image of ${fullname}`);
 /* Step 5 - Array */
-const foods = ['tacos','salads', 'suahi']
-document.querySelector('#food').textContent = foods;
-let another = 'ramen noodels'
-foods.push(another);
-document.querySelector('#food').textContent = foods;
+let foods = [ 'tacos' , 'sushi' , 'ramen noodles', 'pizza' , 'burgers', 'waffles', 'fried chicken'];
+
+foodElement.innerHTML = `<p>${foods}</p>`;
+foods.push('chocolate', 'soup','apples');
+foodElement.innerHTML += `<br>${foods}`;
+foods.shift();
+foodElement.innerHTML += `<br>${foods}`;
+foods.pop();
+foodElement.innerHTML += `<br>${foods}`;
