@@ -10,10 +10,10 @@ const profilePicture = 'images/headshot.jpeg';
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById('name');
 const foodElement = document.getElementById('food');
-const yearElement = document.getElementById('#year');
-const imageElement = document.querySelector('image');
+const yearElement = document.getElementById('year');
+const imageElement = document.querySelector('img');
 /* Step 4 - Adding Content */
- nameElement.innerHTML = `<stong> ${fullname} </strong>`;
+ nameElement.innerHTML = `<strong> ${fullname} </strong>`;
 yearElement.textContent = `${currentyear}`;
 imageElement.setAttribute('src' , profilePicture);
 imageElement.setAttribute('alt', `profile image of ${fullname}`);
