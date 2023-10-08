@@ -22,7 +22,7 @@ document.querySelector("#name").textContent = myProfile.name;
 
 /* Photo with attributes */
 const image = document.querySelector("#photo");
-image.setAttribute("scr", myProfile.photo);
+image.setAttribute("src", myProfile.photo);
 image.setAttribute("alt", myProfile.name);
 
 /* Favorite Foods List*/
@@ -41,13 +41,13 @@ myProfile.hobbies.forEach((hobby) => {
 
 /* Places Lived DataList */
 myProfile.placesLived.forEach((place) => {
-    let dt = document.createElement("dt");
-    dt.textContent = place.place;
-    document.querySelector("#places-lived").appendChild(dt);
-  });
-  
-  myProfile.placesLived.forEach((length) => {
-    let dd = document.createElement("dd");
-    dd.textContent = length.length;
-    document.querySelector("#places-lived").appendChild(dd);
-  });
+  let dt = document.createElement("dt");
+  dt.textContent = place.place;
+  document.querySelector("#places-lived").appendChild(dt);
+});
+
+myProfile.placesLived.forEach((length) => {
+  let dd = document.createElement("dd");
+  dd.textContent = length.length;
+  document.querySelector("#places-lived").appendChild(dd);
+});
