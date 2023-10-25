@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Teams</title>
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+    <h1>NBA Teams</h1>
+
+    <div class="filter">
+        <label for="division-filter">Filter by Division:</label>
+        <select id="division-filter">
+            <option value="all">All</option>
+            <option value="Atlantic">Atlantic</option>
+            <option value="Central">Central</option>
+            <option value="Southeast">Southeast</option>
+            <option value="Northwest">Northwest</option>
+            <option value="Pacific">Pacific</option>
+            <option value="Southwest">Southwest</option>
+        </select>
+    </div>
+
+    <div class="teams-container" id="teams-container">
+        <!-- Teams information will be dynamically added here using JavaScript -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/project.js"></script>
+</body>
+</html>
